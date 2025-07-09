@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #003366;
+}
+.white-section{
+  background-color: beige;
+  padding: 40px 20px;
+  min-height: 50vh;
+}
+.blue-section{
+  background-color: rgb(61, 61, 155);
+  padding: 40px 20px;
+
+  min-height: 50vh;
+}
+.carousel-wrapper {
+  position: relative;
+  max-width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+.ticker {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: red;
+  color: white;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  left: 0px;
+  z-index: 9999;
+  display: inline;
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 12s linear infinite;
+  padding-left: 100%;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
